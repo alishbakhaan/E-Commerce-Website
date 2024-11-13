@@ -10,8 +10,8 @@
     <!-- tailwind styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="/dist/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="../Style/style.css">
-    <link rel="stylesheet" href="../Style/output.css">
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="stylesheet" href="./Style/output.css">
 </head>
 
 <body>
@@ -174,79 +174,99 @@
         <div class="xl:px-52 p-10">
             <a class="text-gray-500" href="index.html">Home</a>
             /
-            <a class="text-gray-500" href="ProcutDetail.html">Product</a>
-            /
-            <a class="text-gray-500" href="Payment.html">Payment</a>
-            /
             <a class="text-gray-500" href="MyProfile.html">My Account</a>
             /
-            <a href="Cart.html">Cart</a>
+            <a class="text-gray-500" href="ProcutDetail.html">Product</a>
+            /
+            <a class="text-gray-500" href="Cart.html">View Cart</a>
+            /
+            <a href="Payment.html">Payment</a>
         </div>
 
+        <!-- Payment -->
+         <div id="payment" class="xl:px-52 p-10">
+            <h1 class="text-4xl font-medium py-4 tracking-wider">Billing Details</h1>
+            <div class="grid xl:grid-cols-2 xl:gap-60 gap-10">
+                <div>
+                    <form action="" method="post" class="space-y-5 py-4">
+                    <label class="block opacity-60 after:content-['*'] after:ml-0.5 after:text-red-500" for="fname">First Name</label>
+                    <input class="bg-[#f5f5f5] w-full rounded-md p-3 block" type="text" name="fname">
+                    <label class="block opacity-60 after:content-['*'] after:ml-0.5 after:text-red-500" for="cname">Company Name</label>
+                    <input class="bg-[#f5f5f5] w-full rounded-md p-3 block" type="text" name="cname">
+                    <label class="block opacity-60 after:content-['*'] after:ml-0.5 after:text-red-500" for="saddress">Street Address</label>
+                    <input class="bg-[#f5f5f5] w-full rounded-md p-3 block" type="text" name="address">
+                    <label class="block opacity-60 after:content-['*'] after:ml-0.5 after:text-red-500" for="Appartment">Apartment, floor, etc. (optional)</label>
+                    <input class="bg-[#f5f5f5] w-full rounded-md p-3 block" type="text" name="Apartment">
+                    <label class="block opacity-60 after:content-['*'] after:ml-0.5 after:text-red-500" for="city">Town/City</label>
+                    <input class="bg-[#f5f5f5] w-full rounded-md p-3 block" type="text" name="city">
+                    <label class="block opacity-60 after:content-['*'] after:ml-0.5 after:text-red-500" for="number">Phone Number</label>
+                    <input class="bg-[#f5f5f5] w-full rounded-md p-3 block" type="number" name="number">
+                    <label class="block opacity-60 after:content-['*'] after:ml-0.5 after:text-red-500" for="email">Email Address</label>
+                    <input class="bg-[#f5f5f5] w-full rounded-md p-3 block" type="email" name="email">
+                    <div class="inline-flex gap-4">
+                        <input type="checkbox" name="check" id="">
+                        <p>Save this information for faster check-out next time</p>
+                    </div>
+                    </form>
+                </div>
+                <div class="space-y-10">
+                  <div class="flex items-center justify-between">
+                    <div class="inline-flex items-center gap-10"> 
+                        <img class="w-14" src="./images/card1 (1).png" alt="card">
+                        <span class="text-base font-normal">LCD Monitor</span>
+                    </div>
+                   <div><span class="text-base font-normal">$650</span></div>
+                  </div>
 
-        <!-- cart -->
-        <div id="cart" class="xl:px-52 p-10">
-            <div class="space-y-10">
-                <div class="overflow-x-auto shadow-md flex flex-nowrap justify-between gap-20 p-6">
-                    <p class="text-base font-normal w-44">Product</p>
-                    <p class="text-base font-normal">Price</p>
-                    <p class="text-base font-normal">Quantity</p>
-                    <p class="text-base font-normal">Subtotal</p>
-                </div>
-                <div class="overflow-x-auto shadow-md flex items-center justify-between gap-20 p-6">
-                    <div class="inline-flex items-center gap-5">
-                        <img class="w-16" src="../images/card1 (3).png" alt="">
-                        <p class="text-base font-normal">LCD Monitor</p>
+                  <div class="flex items-center justify-between">
+                    <div class="inline-flex items-center gap-10"> 
+                        <img class="w-14" src="./images/card1 (3).png" alt="card">
+                        <span class="text-base font-normal">H1 Gamepad</span>
                     </div>
-                    <p class="text-base font-normal">$650</p>
-                    <input class="border border-black rounded-md w-16 p-2 placeholder:text-black" type="number" name=""
-                        id="" placeholder="01">
-                    <p class="text-base font-normal">$650</p>
-                </div>
-                <div class="overflow-x-auto shadow-md flex items-center justify-between gap-20 p-6">
-                    <div class="inline-flex items-center gap-5">
-                        <img class="w-16" src="../images/card1 (1).png" alt="">
-                        <p class="text-base font-normal">H1 Gamepad</p>
+                   <div><span class="text-base font-normal">$650</span></div>
+                  </div>
+
+                  <div class="border-b border-black pb-4 flex justify-between">
+                    <span class="text-base font-normal">Subtotal:</span>
+                    <span class="text-base font-normal">$1750</span>
+                  </div>
+
+                  <div class="border-b border-black pb-4 flex justify-between">
+                    <span class="text-base font-normal">Shipping:</span>
+                    <span class="text-base font-normal">Free</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span class="text-base font-normal">Total:</span>
+                    <span class="text-base font-normal">$1750</span>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <div>
+                        <input type="radio" name="Bank" id="" placeholder="Bank">
+                        <label class="text-base font-normal" for="">Bank</label>
                     </div>
-                    <p class="text-base font-normal">$650</p>
-                    <input class="border border-black rounded-md w-16 p-2 placeholder:text-black" type="number" name=""
-                        id="" placeholder="01">
-                    <p class="text-base font-normal">$650</p>
-                </div>
-                <div class="flex sm:flex-row flex-col justify-between gap-5">
-                    <input  class="bg-white border border-black hover:bg-[#f5f5f5] rounded-md text-sm font-medium text-black px-8 py-4 md:w-auto w-full" type="button" value="Return To Shop">
-                    <input  class="bg-white border border-black hover:bg-[#f5f5f5] rounded-md text-sm font-medium text-black px-8 py-4 md:w-auto w-full" type="button" value="Update Cart">
+                    <img src="./images/payment.png" alt="">
+                  </div>
+
+                  <div>
+                    <input type="radio" name="Bank" id="" placeholder="Bank">
+                    <label class="text-base font-normal" for="">Cash on delivery</label>
+                  </div>
+
+                  <div>
+                    <input class="bg-white border border-black hover:bg-[#f5f5f5] rounded-md text-sm font-normal text-black text-left px-2 py-4 sm:w-[60%] w-full" type="button" value="Coupon Code">
+                    <input class="bg-[#DB4444] my-4 hover:bg-[#E07575] rounded-md text-sm font-normal text-white px-2 py-4 sm:w-[30%] w-full" type="button" value="Apply Coupon">
+                  </div>
+                  <div>
+                    <input class="bg-[#DB4444] hover:bg-[#E07575] rounded-md text-sm font-normal text-white px-4 py-4 md:w-2/5 w-full" type="button" value="Place Order">
+                  </div>
+
                 </div>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-5 py-20">
-                <div class="">
-                    <input class="bg-white hover:bg-[#f5f5f5] border border-black my-4  rounded-md text-sm font-normal text-black md:px-24 py-4 lg:w-auto w-full" type="button" value="Coupon Code">
-                    <input class="bg-[#DB4444] hover:bg-[#E07575] my-4  rounded-md text-sm font-normal text-white md:px-8 py-4 lg:w-auto w-full" type="button" value="Apply Coupon">
-                </div>
-                <div class="border border-black rounded-md p-8">
-                   <h1 class="text-xl font-medium py-4">Cart Total</h1>
-                   <div class="flex justify-between border-b py-4">
-                    <span>Subtotal:</span>
-                    <span>$1750</span>
-                   </div>
-                   <div class="flex justify-between border-b py-4">
-                    <span>Shipping:</span>
-                    <span>$1750</span>
-                   </div>
-                   <div class="flex justify-between py-4">
-                    <span>Total:</span>
-                    <span>$1750</span>
-                   </div>
-                   <div class="flex justify-center">
-                     <input class="bg-[#DB4444] hover:bg-[#E07575] my-4  rounded-md text-sm font-normal text-white md:px-8 py-4 md:w-auto w-full" type="button" value="Procees to checkout">
-                   </div>
-                  
-                </div>
-            </div>
-
-        </div>
-        <!-- cart end-->
+            
+            
+         </div>
 
         <!-- footer -->
 
@@ -259,7 +279,6 @@
                     <div class="inline-flex border rounded-md items-center p-2">
                         <input class="bg-transparent outline-none border-none focus:outline-none focus:ring-0" type="email" name="email" id=""
                             placeholder="Enter your email">
-                       
                     </div>
 
                 </div>
@@ -292,11 +311,11 @@
                     <h1 class="text-xl font-medium">Download App</h1>
                     <p class="text-xs opacity-50">Save $3 with App New User Only</p>
                     <div class="grid grid-cols-2 grid-rows-2">
-                        <img class="row-span-2" src="../images/Qrcode.png" alt="qrcode">
-                        <img src="../images/footer (1).png" alt="">
-                        <img src="../images/footer (2).png" alt="">
+                        <img class="row-span-2" src="./images/Qrcode.png" alt="qrcode">
+                        <img src="./images/footer (1).png" alt="">
+                        <img src="./images/footer (2).png" alt="">
                     </div>
-                    <img src="../images/icon-box.png" alt="icon-box">
+                    <img src="./images/icon-box.png" alt="icon-box">
                 </div>
             </div>
 
@@ -306,6 +325,7 @@
         <!-- footer end  -->
 
     </div>
+
 
     <script>
         // navbar
