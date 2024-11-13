@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce</title>
+  <!-- tailwind styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/dist/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="../Style/style.css">
+</head>
+
+<body>
+  <div class="">
+    <!-- nav -->
+    <div class="bg-white">
+      <!-- mobile -->
+      <div id="mobile-menu" class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
+
+          <div class="fixed inset-0 bg-black/25" aria-hidden="true"></div>
+
+          <div class="fixed inset-0 z-40 flex">
+
+              <div class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+                  <div class="flex px-4 pb-2 pt-5">
+                      <button onclick="toggleMenu()" type="button"
+                          class="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400">
+                          <span class="absolute -inset-0.5"></span>
+                          <span class="sr-only">Close menu</span>
+                          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                              aria-hidden="true" data-slot="icon">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                          </svg>
+                      </button>
+                  </div>
+
+                  <div class="space-y-6 border-t border-gray-200 px-4 py-6">
+                      <div class="flow-root">
+                          <a href="index.html"
+                              class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Home</a>
+                      </div>
+                      <div class="flow-root">
+                          <a href="Contact.html"
+                              class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
+                      </div>
+                      <div class="flow-root">
+                          <a href="About.html"
+                              class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">About</a>
+                      </div>
+                  </div>
+
+                  <div class="space-y-6 border-t border-gray-200 px-4 py-6">
+                      <div class="flow-root">
+                          <a href="Login.html" class="-m-2 block p-2 font-medium text-gray-900">Sign in</a>
+                      </div>
+                      <div class="flow-root">
+                          <a href="SignUp.html" class="-m-2 block p-2 font-medium text-gray-900">Create account</a>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+      <!-- desktop -->
+      <header class="relative bg-white">
+          <p
+              class="flex h-10 items-center justify-center bg-black px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+              Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+              <b><a href="ProcutDetail.html">ShopNow</a></b>
+          </p>
+
+          <nav aria-label="Top" class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
+              <div class="border-b border-gray-200">
+                  <div class="flex h-16 items-center">
+
+                      <button onclick="toggleMenu()" type="button"
+                          class="relative rounded-md bg-white p-2 text-gray-400 lg:hidden">
+                          <span class="absolute -inset-0.5"></span>
+                          <span class="sr-only">Open menu</span>
+                          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                              aria-hidden="true" data-slot="icon">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                          </svg>
+                      </button>
+
+                      <!-- Logo -->
+                      <div class="ml-4 flex lg:ml-0">
+                          <h1 class="font-bold text-2xl">Exclusive</h1>
+                      </div>
+
+                      <!-- Flyout menus -->
+                      <div class="hidden lg:ml-8 lg:block lg:self-stretch">
+                          <div class="flex h-full space-x-8">
+                              <a href="index.html"
+                                  class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Home</a>
+                              <a href="Contact.html"
+                                  class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
+                              <a href="About.html"
+                                  class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">About</a>
+                          </div>
+                      </div>
+
+                      <div class="ml-auto flex items-center">
+                          <!-- Login/SignUp -->
+                          <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                              <a href="Login.html" class="text-sm font-medium text-gray-700 hover:text-gray-800">Sign
+                                  in</a>
+                              <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
+                              <a href="SignUp.html"
+                                  class="text-sm font-medium text-gray-700 hover:text-gray-800">Create account</a>
+                          </div>
+
+                          <!-- Search -->
+                          <li class="flex relative group z-10 lg:ml-6">
+                              <svg class=" size-8 hover:bg-[#DB4444] rounded-full p-1" fill="none" viewBox="0 0 24 24"
+                                  stroke-width="1.5" stroke="gray" aria-hidden="true" data-slot="icon">
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0zM4.5 20.25a7.5 7.5 0 1 1 15 0" />
+                              </svg>
+
+                              <!-- Submenu starts -->
+                              <ul
+                                  class="absolute bg-black w-52 top-10 right-0 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-md rounded-md">
+                                  <li class="text-base p-2 hover:bg-[#f5f5f5] hover:text-black text-white leading-8">
+                                      <a href="MyProfile.html">Manage My Account</a></li>
+                                  <li class="text-base p-2 hover:bg-[#f5f5f5] hover:text-black text-white leading-8">
+                                      <a href="Payment.html">Payment Detail</a></li>
+                                  <li class="text-base p-2 hover:bg-[#f5f5f5] hover:text-black text-white leading-8">
+                                      <a href="Login.html">Logout</a></li>
+                              </ul>
+                              <!-- Submenu ends -->
+                          </li>
+
+                          <!-- Wishlist -->
+                          <div class="flex lg:ml-6">
+                              <a href="Wishlist.html" class="p-2 text-gray-400 hover:text-gray-500">
+                                  <span class="sr-only">Search</span>
+                                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                      stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                      <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                  </svg>
+                              </a>
+                          </div>
+
+                          <!-- Cart -->
+                          <div class="ml-4 flow-root lg:ml-6">
+                              <a href="Cart.html" class="group -m-2 flex items-center p-2">
+                                  <svg class="size-6 shrink-0 text-gray-400 group-hover:text-gray-500" fill="none"
+                                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                      data-slot="icon">
+                                      <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                  </svg>
+                                  <span class="sr-only">items in cart, view bag</span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </header>
+  </div>
+
+    <!-- login -->
+    <div class="flex lg:flex-row flex-col gap-20 items-center py-10">
+     
+        <img src="../images/login.png" class="2xl:w-[1000px] lg:w-[600px] w-full 2xl:h-[800px]" alt="login">
+      
+      <div class="">
+        <h1 class="sm:text-4xl text-2xl font-semibold py-5 tracking-widest">Log in to Exclusive</h1>
+        <p class="text-base font-medium">Enter your details below</p>
+        <div class="py-5">
+          <input class="py-2 pr-32 border-b-2 focus:outline-none focus:border-b-black" type="email" name="email" id="" placeholder="Email or Phone Number" autocomplete="">
+        </div>
+        <div class="py-5">
+          <input class="py-2  pr-32 border-b-2 focus:outline-none focus:border-b-black" type="password" name="password" id="" placeholder="Password" autocomplete="">
+        </div>
+        <div class="py-5">
+          <input class="bg-[#DB4444] md:text-lg text-sm font-normal text-white px-10 py-4 rounded-md" type="button"
+          value="Login">  
+           <a class="text-[#DB4444] text-right ml-16" href="#">Don't have an account?</a>
+           <a class="text-[#DB4444] text-right underline underline-offset-8 font-bold" href="SignUp.html">SignUp</a>
+        </div>
+        
+     
+      </div>
+    </div>
+
+     <!-- footer -->
+
+     <div id="footer" class="bg-black 2xl:px-52 xl:pt-20 p-10 text-white">
+      <div class="grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+        <div class="box1 p-5 space-y-5">
+          <h1 class="text-2xl font-bold">Exclusive</h1>
+          <h3>Subscribe</h3>
+          <p>Get 10% off your first order</p>
+          <div class="inline-flex border rounded-md items-center p-2">
+            <input class="bg-transparent outline-none border-none focus:outline-none focus:ring-0" type="email" name="email" id="" placeholder="Enter your email">
+          </div>
+
+        </div>
+
+        <div class="box2 p-5 space-y-5">
+          <h1 class="text-xl font-medium">Support</h1>
+          <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+          <p>exclusive@gmail.com</p>
+          <p>+88015-88888-9999</p>
+        </div>
+
+        <div class="box3 p-5 space-y-5">
+          <h1 class="text-xl font-medium">Account</h1>
+          <p>My Account</p>
+          <p>Login / Register</p>
+          <p>Cart</p>
+          <p>Wishlist</p>
+          <p>Shop</p>
+        </div>
+
+        <div class="box4 p-5 space-y-5">
+          <h1 class="text-xl font-medium">Quick Link</h1>
+          <p>Privacy Policy</p>
+          <p>Terms of Use</p>
+          <p>FAQ</p>
+          <p>Contact</p>
+        </div>
+
+        <div class="box5 p-5 space-y-5">
+          <h1 class="text-xl font-medium">Download App</h1>
+          <p class="text-xs opacity-50">Save $3 with App New User Only</p>
+          <div class="grid grid-cols-2 grid-rows-2">
+            <img class="row-span-2" src="../images/Qrcode.png" alt="qrcode">
+            <img src="../images/footer (1).png" alt="">
+            <img src="../images/footer (2).png" alt="">
+          </div>
+          <img src="../images/icon-box.png" alt="icon-box">
+        </div>
+      </div>
+
+      <div class="border-t-2 text-white text-center pt-4 opacity-20">@ Copyright Rimel 2022. All right reserved</div>
+    </div>
+    <!-- footer end -->
+
+  </div>
+
+  <script>
+    // navbar
+    function toggleMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    }
+</script>
+</body>
+
+</html>
