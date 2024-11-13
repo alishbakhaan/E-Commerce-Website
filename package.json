@@ -6,5 +6,10 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
-  }
+  },
+  "scripts": {
+  "build": "npx tailwindcss -o ./Style/output.css --minify",
+  "dev": "npx tailwindcss -o ./Style/output.css --watch"
+}
+
 }
